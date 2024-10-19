@@ -1,0 +1,56 @@
+.detallesR{
+position: relative;
+height: 500px;
+display: flex;
+}
+.registros_usher{
+width: 80%;
+height: 60%;
+margin-left: 10%;
+padding-top: 5%;
+border-radius: 5px;
+box-shadow:1px 1px 4px 1px rgba(99, 98, 98, 0.178);
+padding-left: 5%;
+}
+.contenedor__detallesR{
+    width: 65%;
+    height: 100%;
+}
+.registrosR{
+    width: 30%; 
+    box-shadow: 0px 7px 10px 0px rgba(99, 98, 98, 0.178);
+}
+.detalles_simple ,.detalles_doble,.detalles_triple{
+    width:90%; 
+    box-shadow:1px 1px 1px 1px rgba(99, 98, 98, 0.178);
+    display: flex;
+   flex-wrap: wrap;
+   margin-left: 18px;
+}
+.detalles_doble,.detalles_triple{
+    margin-top: 5px;
+}
+h2{
+    background-color:#F56F01;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.text_habitacionS{
+    background-color: rgba(190, 152, 152, 0.103);
+    width: 46%;
+    height: 20px;
+    display: flex;
+    border-radius: 3px;
+    box-shadow: 0px 7px 10px 0px rgba(152, 148, 148, 0.088);
+    margin: 5px;
+    padding-left: 5px;
+}
+.text_habitacionS_ocult{
+    margin-left: 3px;
+}
+.ocultoS,.ocultoD,.ocultoT{
+    display: none;
+}

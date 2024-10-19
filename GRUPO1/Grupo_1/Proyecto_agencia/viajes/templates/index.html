@@ -1,0 +1,815 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Agencia RumboTravel</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/img/icono_rumbotravel.ico'%}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <!-- <link href="{%static 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'%}" rel="stylesheet" type="text/css" />-->
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+        <link rel="stylesheet" href="{%static 'css/sweetalert2.min.css'%}">
+        <!-- <link rel="stylesheet" href="{%static 'css/estilo.css'%}"> -->
+        <link href="{% static 'css/styles.css'%}" rel="stylesheet"/>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top"><img src="{% static 'assets/img/RumboTravel.png'%}" alt="..." /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#services">PAQUETES</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">PORTAFOLIO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">HOTELERIA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">EQUIPO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">CONTACTO</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+  <header class="masthead">
+    <div class="container">
+      <div class="masthead-subheading">BIENVENIDOS A RUMBO TRAVEL</div>
+      <div class="masthead-heading text-uppercase">DATE UNA OPORTUNIDAD ESTAREMOS ENCANTADOS DE ATENDERTE</div>
+      <a class="btn btn-primary btn-xl text-uppercase" href="#services">TE CONTAMOS MÀS SOBRE NOSOTROS</a>
+    </div>
+  </header>
+  <!-- Services-->
+  <section class="page-section" id="services">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase">PAQUETES</h2>
+        <h3 class="section-subheading text-muted">
+          Te Brindamos Informacion de Nuestros Paquetes Turisticos .
+        </h3>
+      </div>
+      <div class="row text-center">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control barrabuscar" placeholder="Buscar Paquete Turístico"
+            aria-label="Recipient's username" aria-describedby="basic-addon2" required />
+          <button class="btn btn-outline-secondary bg-info text-dark" type="button" id="Buscar">
+            Buscar
+          </button>
+
+        </div>
+
+        <div id="resultado"></div>
+      </div>
+    </div>
+
+    <section class="page-section bg-light" id="portfolio">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-heading text-uppercase">Portfolio</h2>
+          <h3 class="section-subheading text-muted">
+            Descubre destinos únicos con Rumbo Travel. Ofrecemos 6 paquetes turísticos a Cartagena, Nuquí, Bahía Solano
+            y Panamá, con playas, naturaleza y cultura. Reserva hoy y vive una experiencia inolvidable.
+          </h3>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-sm-6 mb-4">
+            <!-- Portfolio item 1-->
+            <div class="portfolio-item">
+              <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content">
+                    <i class="fas fa-plus fa-3x"></i>
+                  </div>
+                </div>
+                <img class="img-fluid" src="{% static 'assets/img/portfolio/bahia2.jpg' %}" alt="..." />
+              </a>
+              <div class="portfolio-caption">
+                <div class="portfolio-caption-heading">BAHÍA SOLANO</div>
+                <div class="portfolio-caption-subheading text-muted">Plan Tortuga</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio items for Cartagena and Eje Cafetero side by side -->
+          <div class="col-lg-4 col-sm-6 mb-4">
+            <!-- Portfolio item 2 (Cartagena)-->
+            <div class="portfolio-item">
+              <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content">
+                    <i class="fas fa-plus fa-3x"></i>
+                  </div>
+                </div>
+                <img class="img-fluid" src="{% static 'assets/img/portfolio/cartagena1.jpg' %}" alt="..." />
+              </a>
+              <div class="portfolio-caption">
+                <div class="portfolio-caption-heading">CARTAGENA DE INDIAS</div>
+                <div class="portfolio-caption-subheading text-muted">Hotel Capilla Del Mar</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-6 mb-4">
+            <!-- Portfolio item 3 (Eje Cafetero)-->
+            <div class="portfolio-item">
+              <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content">
+                    <i class="fas fa-plus fa-3x"></i>
+                  </div>
+                </div>
+                <img class="img-fluid" src="{% static 'assets/img/portfolio/ejecafetero.png' %}" alt="..." />
+              </a>
+              <div class="portfolio-caption">
+                <div class="portfolio-caption-heading">EJE CAFETERO</div>
+                <div class="portfolio-caption-subheading text-muted">Hotel Mi Monaco</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Centered Nuquí -->
+          <div class="col-lg-4 col-sm-6 mb-4 d-flex justify-content-center">
+            <!-- Portfolio item 4 (Nuquí)-->
+            <div class="portfolio-item">
+              <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content">
+                    <i class="fas fa-plus fa-3x"></i>
+                  </div>
+                </div>
+                <img class="img-fluid" src="{% static 'assets/img/portfolio/nuqui.jpeg' %}" alt="..." />
+              </a>
+              <div class="portfolio-caption">
+                <div class="portfolio-caption-heading">NUQUÍ</div>
+                <div class="portfolio-caption-subheading text-muted">Nuquí Soleado</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Centered Playas de Panamá -->
+          <div class="col-lg-4 col-sm-6 mb-4 d-flex justify-content-center">
+            <!-- Portfolio item 5 (Playas de Panamá)-->
+            <div class="portfolio-item">
+              <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content">
+                    <i class="fas fa-plus fa-3x"></i>
+                  </div>
+                </div>
+                <img class="img-fluid" src="{% static 'assets/img/portfolio/panama1.jpg' %}" alt="..." />
+              </a>
+              <div class="portfolio-caption">
+                <div class="portfolio-caption-heading">PLAYAS DE PANAMÁ</div>
+                <div class="portfolio-caption-subheading text-muted">Panamá Riu Playa Blanca</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About-->
+    <section class="page-section" id="about">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-heading text-uppercase">HOTELERIA</h2>
+          <h3 class="section-subheading text-muted">
+            Conoce Todo Hacerca de Nuestros Hoteles.
+          </h3>
+        </div>
+        <ul class="timeline">
+          <li>
+            <div class="timeline-image">
+              <img class="rounded-circle img-fluid" src="{%static 'assets/img/HOTELERIA/bahia.jpeg'%}" alt="..." />
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="subheading">HOTEL BALBOA : BAHIA SOLANO</h4>
+              </div>
+              <div class="timeline-body">
+                <p class="text-muted">
+                  El Hotel Balboa está ubicado en una zona céntrica de Bahía Solano,
+                  lo que facilita a los turistas explorar el pueblo y acceder fácilmente a restaurantes,
+                  tiendas locales y el puerto. Además, su cercanía a la playa y la selva tropical lo
+                  convierte en un punto de partida ideal para actividades ecoturísticas.
+                  El hotel organiza caminatas guiadas a través de la selva tropical,
+                  donde los turistas pueden explorar la biodiversidad del Chocó.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="timeline-image">
+              <img class="rounded-circle img-fluid" src="{%static 'assets/img/HOTELERIA/cartagena.jpg'%}" alt="..." />
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="subheading">CARTAGENA DE INDIAS : HOTEL CAPILLA DEL MAR</h4>
+              </div>
+              <div class="timeline-body">
+                <p class="text-muted">
+                  El Hotel Capilla del Mar en Cartagena es uno de los más populares de la ciudad,
+                  gracias a su ubicación privilegiada y a las experiencias únicas que ofrece.Situado
+                  en la famosa Bocagrande, una de las áreas más vibrantes de Cartagena,
+                  el Hotel Capilla del Mar ofrece vistas espectaculares al mar Caribe.
+                  La ubicación es perfecta para quienes desean disfrutar de la playa justo frente
+                  al hotel y explorar el área con sus restaurantes, tiendas y vida nocturna.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-image">
+              <img class="rounded-circle img-fluid" src="{%static 'assets/img/HOTELERIA/eje1.jpg'%}" alt="..." />
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="subheading">EJE CAFETERO : HOTEL MI MONACO</h4>
+              </div>
+              <div class="timeline-body">
+                <p class="text-muted">
+                  El Hotel Mi Mónaco, ubicado en el corazón del Eje Cafetero,
+                  ofrece una experiencia única que resalta la belleza natural y cultural de esta región,
+                  reconocida como Patrimonio de la Humanidad por la UNESCO.
+                  El Hotel Mi Mónaco está rodeado de paisajes impresionantes, típicos del Eje Cafetero.
+                  colinas verdes, plantaciones de café y montañas.
+                  Este hotel ofrece a sus huéspedes la oportunidad de participar
+                  en tours cafeteros por las fincas locales.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="timeline-image">
+              <img class="rounded-circle img-fluid" src="{%static 'assets/img/HOTELERIA/nuqui.jpg'%}" alt="..." />
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>NUQUI</h4>
+                <h4 class="subheading">HOTEL : ACUALI LODGE</h4>
+              </div>
+              <div class="timeline-body">
+                <p class="text-muted">
+                  El Hotel Acuali Lodge, ubicado en Nuquí, Chocó, es un paraíso natural que ofrece,
+                  experiencias únicas para los viajeros que buscan desconectarse y disfrutar de la,
+                  exuberante biodiversidad de la región.Entre julio y octubre, Acuali Lodge organiza,
+                  tours para el avistamiento de ballenas jorobadas, una de las experiencias más espectaculares,
+                  que ofrece la región. Los huéspedes tienen la oportunidad de observar a estos magníficos,
+                  mamíferos mientras realizan sus migraciones anuales.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="timeline-image">
+              <img class="rounded-circle img-fluid" src="{%static 'assets/img/HOTELERIA/pana3.jpg'%}" alt="..." />
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>PANAMÁ</h4>
+                <h4 class="subheading">HOTEL : INTERCONTINENTAL MIRAMAR </h4>
+              </div>
+              <div class="timeline-body">
+                <p class="text-muted">
+                  El Hotel InterContinental Miramar te permite Una de las experiencias más atractivas
+                  del Océano Pacífico, la Cinta Costera y
+                  Las suites con balcón privado son especialmente atractivas,
+                  permitiendo a los huéspedes relajarse al aire libre mientras contemplan el horizonte
+                  de la ciudad, Además, el hotel organiza tours personalizados a lugares turísticos
+                  cercanos como el Canal de Panamá , el Biomuseo y ruinas de Panamá Viejo, El hotel
+                  organiza eventos especiales y experiencias que conectan a los turistas con la
+                  cultura local. Desde noches temáticas con música en vivo, como jazz o música
+                  tradicional panameña.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="timeline-image">
+              <h6>
+                Conoce
+                <br />
+                nuestros
+                <br />
+                destinos
+                <br />
+                turisticos!
+              </h6>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Team-->
+    <section class="page-section bg-light" id="team">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-heading text-uppercase">NUESTRO EQUIPO DE TRABAJO</h2>
+          <h3 class="section-subheading text-muted">
+            Somos una empresa emergente de programadores brindamos soluciones tecnológicas innovadoras para
+            Aplicaciones web y móviles.
+            Nuestra capacidad para adaptarnos rápidamente a las necesidades de los clientes nos permite cumplir
+            con los objetivos de cada proyecto de manera eficiente.
+            Nos apasiona la tecnología y estamos comprometidos en convertirnos en socios tecnológicos
+            confiables para nuestros clientes, Ofreciendo alternativas que no solo resuelven problemas,
+            sino que impulsan su crecimiento en lo personal como empresarial.
+          </h3>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="{%static 'assets/img/EQUIPO/edwar.jpeg'%}" alt="..." />
+              <h4>Edwar Vanegas Salas</h4>
+              <p class="text-muted">Desarrollador Principal</p>
+              <!--  -->
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="{%static 'assets/img/EQUIPO/wendy.jpg'%}" alt="..." />
+              <h4>Wendy Samira Rivas Caraballo</h4>
+              <p class="text-muted">Diseñadora Principal</p>
+              <!--  -->
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="{%static 'assets/img/EQUIPO/pedro.jpg'%}" alt="..." />
+              <h4>Pedro Luis Cordoba Rodriguez</h4>
+              <p class="text-muted">Desarrollador</p>
+
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-lg-4 d-flex justify-content-center">
+              <div class="team-member">
+                <img class="mx-auto rounded-circle" src="{% static 'assets/img/EQUIPO/ana.jpg' %}" alt="..." />
+                <h4>Ana Yancy Hurtado Ibarguen</h4>
+                <p class="text-muted">Consultora Técnica</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 d-flex justify-content-center">
+              <div class="team-member">
+                <img class="mx-auto rounded-circle" src="{% static 'assets/img/EQUIPO/bilman.jpg' %}" alt="..." />
+                <h4>Bilman Andrés Marmolejo Palacios</h4>
+                <p class="text-muted">Técnico de Soporte</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact-->
+          <section class="page-section" id="contact">
+            <div class="container">
+              <div class="text-center">
+                <h3 class="section-heading text-uppercase">Contàctanos</h3>
+                <h3 class="section-subheading text-muted">
+                  Servicio de atencion al cliente.
+                </h3>
+              </div>
+              <!-- * * * * * * * * * * * * * * *-->
+              <!-- * * SB Forms Contact Form * *-->
+              <!-- * * * * * * * * * * * * * * *-->
+              <!-- This form is pre-integrated with SB Forms.-->
+              <!-- To make this form functional, sign up at-->
+              <!-- https://startbootstrap.com/solution/contact-forms-->
+              <!-- to get an API token!-->
+              <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                <div class="row align-items-stretch mb-5">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <!-- Name input-->
+                      <input class="form-control" id="name" type="text" placeholder="Nombre *"
+                        data-sb-validations="required" />
+                      <div class="invalid-feedback" data-sb-feedback="name:required">
+                        A name is required.
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <!-- Email address input-->
+                      <input class="form-control" id="email" type="email" placeholder="Correo *"
+                        data-sb-validations="required,email" />
+                      <div class="invalid-feedback" data-sb-feedback="email:required">
+                        An email is required.
+                      </div>
+                      <div class="invalid-feedback" data-sb-feedback="email:email">
+                        Email is not valid.
+                      </div>
+                    </div>
+                    <div class="form-group mb-md-0">
+                      <!-- Phone number input-->
+                      <input class="form-control" id="phone" type="tel" placeholder="Telèfono *"
+                        data-sb-validations="required" />
+                      <div class="invalid-feedback" data-sb-feedback="phone:required">
+                        A phone number is required.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group form-group-textarea mb-md-0">
+                      <!-- Message input-->
+                      <textarea class="form-control" id="message" placeholder="Deja tu mensaje *"
+                        data-sb-validations="required"></textarea>
+                      <div class="invalid-feedback" data-sb-feedback="message:required">
+                        A message is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Submit success message-->
+                <!---->
+                <!-- This is what your users will see when the form-->
+                <!-- has successfully submitted-->
+                <div class="d-none" id="submitSuccessMessage">
+                  <div class="text-center text-white mb-3">
+                    <div class="fw-bolder">Form submission successful!</div>
+                    To activate this form, sign up at
+                    <br />
+                    <a
+                      href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                  </div>
+                </div>
+                <!-- Submit error message-->
+                <!---->
+                <!-- This is what your users will see when there is-->
+                <!-- an error submitting the form-->
+                <div class="d-none" id="submitErrorMessage">
+                  <div class="text-center text-danger mb-3">
+                    Error sending message!
+                  </div>
+                </div>
+                <!-- Submit Button-->
+                <div class="text-center">
+                  <button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">
+                    Enviar mensaje
+                  </button>
+                </div>
+              </form>
+            </div>
+          </section>
+
+          <!-- Portfolio Modals-->
+          <!-- Portfolio item 1 modal popup-->
+          <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal">
+                  <img src="{%static 'assets/img/close-icon.svg'%}" alt="Close modal" />
+                </div>
+                <div class="container">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                      <div class="modal-body">
+                        <!-- Project details-->
+                        <h2 class="text-uppercase">RUMBO TRAVEL</h2>
+                        <p class="item-intro text-muted">
+                          Descubre la magia oculta en cada rincón de este paraíso. Ven y vive una aventura inolvidable.
+                        </p>
+                        <img class="img-fluid d-block mx-auto" src="{%static 'assets/img/portfolio/bahia1.jpg'%}"
+                          alt="..." />
+                        <p>
+                          Bahía Solano: El Paraíso Oculto del Pacífico Colombiano
+                          Si buscas una aventura inolvidable en un rincón remoto y virgen de Colombia,
+                          Bahía Solano es el destino perfecto. Ubicada en la exuberante costa pacífica,
+                          este lugar es un santuario natural que combina selva tropical, playas de arena
+                          dorada y un océano repleto de vida. Bahía Solano es más que un destino, es una
+                          experiencia que despierta los sentidos y te conecta con la naturaleza en su estado
+                          más puro.Aquí, el turismo no se trata solo de relajarse en playas paradisíacas,
+                          sino de sumergirse en la aventura. Desde el avistamiento de ballenas jorobadas,
+                          que migran cada año a estas aguas cristalinas, hasta el senderismo por la selva
+                          tropical, donde descubrirás cascadas ocultas y una biodiversidad única, este lugar
+                          lo tiene todo para los amantes de la naturaleza y la aventura.
+                        </p>
+
+                        <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                          <i class="fas fa-xmark me-1"></i>
+                          Cerrar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Portfolio item 2 modal popup-->
+          <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal">
+                  <img src="{%static 'assets/img/close-icon.svg'%}" alt="Close modal" />
+                </div>
+                <div class="container">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                      <div class="modal-body">
+                        <!-- Project details-->
+                        <h2 class="text-uppercase">RUMBO TRAVEL</h2>
+                        <p class="item-intro text-muted">
+                          Tu próxima gran experiencia está a solo un viaje de distancia. Déjate sorprender por este
+                          lugar increíble.
+                        </p>
+                        <img class="img-fluid d-block mx-auto" src="{%static 'assets/img/portfolio/cartagena.jpg'%}"
+                          alt="..." />
+                        <p>
+                          Cartagena de Indias es un destino donde la historia, la cultura y la belleza
+                          natural se entrelazan en una experiencia única que te transporta a otro tiempo.
+                          Aquí, cada rincón cuenta una historia. Desde las imponentes fortificaciones del
+                          Castillo de San Felipe de Barajas, hasta la majestuosidad de sus iglesias y conventos,
+                        </p>
+
+                        <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                          <i class="fas fa-xmark me-1"></i>
+                          Cerrar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Portfolio item 3 modal popup-->
+          <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal">
+                  <img src="{%static 'assets/img/close-icon.svg'%}" alt="Close modal" />
+                </div>
+                <div class="container">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                      <div class="modal-body">
+                        <!-- Project details-->
+                        <h2 class="text-uppercase">RUMBO TRAVEL</h2>
+                        <p class="item-intro text-muted">
+                          Tu próxima gran experiencia está a solo un viaje de distancia. Déjate sorprender por este
+                          lugar increíble.
+                        </p>
+                        <img class="img-fluid d-block mx-auto" src="{%static 'assets/img/portfolio/cartagena.jpg'%}"
+                          alt="..." />
+                        <p>
+                          Cartagena de Indias es un destino donde la historia, la cultura y la belleza
+                          natural se entrelazan en una experiencia única que te transporta a otro tiempo.
+                          Aquí, cada rincón cuenta una historia. Desde las imponentes fortificaciones del
+                          Castillo de San Felipe de Barajas, hasta la majestuosidad de sus iglesias y conventos,
+                          Cartagena es un lugar donde la historia cobra vida. Además, Cartagena es un paraíso
+                          para los amantes del mar. Sus cercanas playas de arena blanca y aguas turquesas,
+                          como las del Archipiélago de las Islas del Rosario, te invitan a relajarte o
+                          practicar deportes acuáticos como el snorkel, el buceo o el paddleboarding.
+                          Cartagena de Indias no es solo un destino, es una experiencia que despierta
+                          todos tus sentidos. Un lugar donde puedes caminar por calles que han sido
+                          testigos de siglos de historia, disfrutar de la brisa cálida del Caribe y
+                          sumergirte en una cultura que te dejará maravillado. No esperes más para descubrirla.
+                        </p>
+
+                        <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                          <i class="fas fa-xmark me-1"></i>
+                          Cerrar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Portfolio item 4 modal popup-->
+          <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal">
+                  <img src="{%static 'assets/img/close-icon.svg'%}" alt="Close modal" />
+                </div>
+                <div class="container">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                      <div class="modal-body">
+                        <!-- Project details-->
+                        <h2 class="text-uppercase">RUMBO TRAVEL</h2>
+                        <p class="item-intro text-muted">
+                          El viaje de tus sueños comienza aquí. Empaca tus maletas y ven a disfrutar de este destino
+                          espectacular.
+                        </p>
+                        <img class="img-fluid d-block mx-auto" src="{%static 'assets/img/portfolio/ejecafetero3.jpg'%}"
+                          alt="..." />
+                        <p>
+                          Eje Cafetero: El Corazón Verde de Colombia, Donde el Café y la Naturaleza se Encuentran.
+                          Sumérgete en el Eje Cafetero, una región que no solo produce el mejor café del mundo,
+                          sino que también ofrece paisajes exuberantes, montañas ondulantes y una experiencia
+                          cultural única.Explora el Valle de Cocora, hogar de las palmas de cera más altas del
+                          mundo, donde puedes hacer senderismo rodeado de paisajes únicos e inolvidables.
+                          Disfruta de la magia de pueblos como Salento y Filandia, con su arquitectura colorida,
+                          calles empedradas y artesanías locales que reflejan la esencia del campo colombiano.
+                          Cada pueblo tiene su propio encanto y te hará sentir parte de una postal viviente.
+                          El Eje Cafetero también es ideal para los amantes de la naturaleza y la aventura.
+                          En sus montañas y parques naturales, como el Parque Nacional Natural Los Nevados,
+                          puedes practicar senderismo, avistamiento de aves, y hasta relajarte en aguas termales
+                          rodeadas de paisajes impresionantes.
+                        <p>
+
+                          <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                            <i class="fas fa-xmark me-1"></i>
+                            Cerrar
+                          </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Portfolio item 5 modal popup-->
+          <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal">
+                  <img src="{%static 'assets/img/close-icon.svg'%}" alt="Close modal" />
+                </div>
+                <div class="container">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                      <div class="modal-body">
+                        <!-- Project details-->
+                        <h2 class="text-uppercase">RUMBO TRAVEL</h2>
+                        <p class="item-intro text-muted">
+                          Explora, relájate y redescubre la esencia de la naturaleza en este rincón del mundo.
+                        </p>
+                        <img class="img-fluid d-block mx-auto" src="{%static 'assets/img/portfolio/nuquiplaya.jpg'%}"
+                          alt="..." />
+                        <p>
+                          Si lo que buscas es escapar a un paraíso natural, lejos del bullicio de las ciudades,
+                          Nuquí es el destino perfecto. Ubicado en la costa del Pacífico colombiano, este lugar
+                          combina la magia de la selva tropical con la inmensidad del océano, creando un entorno
+                          único donde la naturaleza es la protagonista. Nuquí es sinónimo de aventura,
+                          tranquilidad y una conexión profunda con el entorno.Uno de los mayores atractivos de
+                          Nuquí es el avistamiento de ballenas jorobadas. Cada año, entre julio y octubre,
+                          estas gigantes del mar migran a las cálidas aguas del Pacífico para dar a luz a sus crías.
+                          Si buscas un destino que combine aventura, naturaleza y tranquilidad, Nuquí es el lugar
+                          indicado
+                          Aquí no solo encontrarás playas vírgenes y selvas imponentes, sino también una sensación
+                          de paz y conexión con lo esencial.
+                        </p>
+
+                        <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                          <i class="fas fa-xmark me-1"></i>
+                          Cerrar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Portfolio item 6 modal popup-->
+          <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal">
+                  <img src="{%static 'assets/img/close-icon.svg'%}" alt="Close modal" />
+                </div>
+                <div class="container">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                      <div class="modal-body">
+                        <!-- Project details-->
+                        <h2 class="text-uppercase">RUMBO TRAVEL</h2>
+                        <p class="item-intro text-muted">
+                          Porque los mejores recuerdos no se hacen en casa, aventúrate y crea los tuyos aquí.
+                        </p>
+                        <img class="img-fluid d-block mx-auto" src="{%static 'assets/img/portfolio/panamaplaya.jpg'%}"
+                          alt="..." />
+                        <p>
+                          Panamá es un destino que lo tiene todo: desde una vibrante metrópoli moderna hasta selvas
+                          exuberantes,
+                          playas paradisíacas y una historia fascinante. Este país, ubicado entre dos océanos,
+                          es el punto de encuentro de culturas, naturaleza, y aventura, convirtiéndolo en un lugar único
+                          en el mundo.
+                          El Archipiélago de San Blas, con más de 300 islas, es ideal para quienes buscan relajarse en
+                          playas de
+                          arena blanca rodeadas de aguas cristalinas. Explora las selvas tropicales del Parque Nacional
+                          Soberanía,
+                          donde puedes avistar aves exóticas, monos y una biodiversidad increíble.
+                        </p>
+                        <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                          <i class="fas fa-xmark me-1"></i>
+                          Cerrar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Portfolio item 5 modal popup-->
+              <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="{%static 'assets/img/close-icon.svg'%}"
+                        alt="Close modal" /></div>
+                    <div class="container">
+                      <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                          <div class="modal-body">
+                            <!-- Project details-->
+                            <h2 class="text-uppercase">Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-fluid d-block mx-auto" src="{%static 'assets/img/portfolio/5.jpg'%}"
+                              alt="..." />
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
+                              repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
+                              nostrum, reiciendis facere nemo!</p>
+                            <ul class="list-inline">
+                              <li>
+                                <strong>Client:</strong>
+                                Southwest
+                              </li>
+                              <li>
+                                <strong>Category:</strong>
+                                Website Design
+                              </li>
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                              <i class="fas fa-xmark me-1"></i>
+                              Close Project
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Portfolio item 6 modal popup-->
+              <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="{%static 'assets/img/close-icon.svg'%}"
+                        alt="Close modal" /></div>
+                    <div class="container">
+                      <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                          <div class="modal-body">
+                            <!-- Project details-->
+                            <h2 class="text-uppercase">Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-fluid d-block mx-auto" src="{%static 'assets/img/portfolio/6.jpg'%}"
+                              alt="..." />
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
+                              repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
+                              nostrum, reiciendis facere nemo!</p>
+                            <ul class="list-inline">
+                              <li>
+                                <strong>Client:</strong>
+                                Window
+                              </li>
+                              <li>
+                                <strong>Category:</strong>
+                                Photography
+                              </li>
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                              <i class="fas fa-xmark me-1"></i>
+                              Close Project
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Bootstrap core JS-->
+              <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> -->
+              <!-- Core theme JS-->
+              <script src="{% static 'js/jquery-3.7.1.min.js'%}"></script>
+              <script src="{% static 'js/sweetalert2.all.min.js'%}"></script>
+              <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+              <script src="{% static 'js/scripts.js'%}"></script>
+              <script src="{% static 'js/consulta.js'%}"></script>
+              <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+              <!-- * *                               SB Forms JS                               * *-->
+              <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+              <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+              <!--<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>-->
+</body>
+
+</html>
