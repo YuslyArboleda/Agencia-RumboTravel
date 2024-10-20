@@ -1,0 +1,173 @@
+.container_dettale {
+  background-color: rgb(255, 255, 255);
+}
+.Registro {
+ display: flex;
+}
+.container_detalle__selecionar {
+  margin-left: 30%;
+  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.178);
+  border-radius: 5px;
+  padding: 2%;
+  height: 100%;
+  
+}
+.container_detalle__selecionarRegistros {
+  margin-left: 3%;
+  border-radius: 5px;
+  padding: 2%;
+ 
+}
+.detalles_simple ,.detalles_doble,.detalles_triple{
+  width:90%; 
+  box-shadow:1px 1px 1px 1px rgba(99, 98, 98, 0.178);
+  display: flex;
+ flex-wrap: wrap;
+ margin-left: 18px;
+}
+.detalles_doble,.detalles_triple{
+  margin-top: 5px;
+}
+.text_habitacionS{
+  background-color: rgba(203, 202, 202, 0.126);
+  width: 46%;
+  height: 20px;
+  display: flex;
+  border-radius: 3px;
+  box-shadow: 0px 7px 10px 0px rgba(152, 148, 148, 0.088);
+  margin: 3px;
+  padding-left: 5px;
+}
+.contenedorS, .contenedorD, .contenedorT{
+display: flex;
+}
+.valorAdulto,.valorNiños,.valorHabitacion{
+  width: 250px;
+}
+#total_habitaciones{
+  font-size: 15px;
+}
+.valor_tarifa{
+  display: flex;
+}
+.container_seleccion3--valorHabitacion{
+  width: 90%;
+height: 20px;
+  display: flex;
+ justify-content: space-around;
+ position: relative;
+}
+.container_seleccion3__precioTotal{
+  display: flex;
+  height: 30px;
+}
+.total_precio{ 
+  margin: 5px;
+}
+
+
+h3 {
+  margin-left: 20%;
+}
+
+color {
+  color: rgb(245, 111, 1);
+}
+
+.btn_selecionar {
+  margin-left: 35%;
+  background: #b4b2b2;
+}
+
+.activo {
+    background-color: #F56F01;
+    color: rgb(255, 255, 255);
+}
+
+.inactivo {
+    background-color: #f44336; /* Rojo */
+    color: white;
+}
+
+hr {
+  background-color: black;
+}
+
+.container_detalle__agregar {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.ocult {
+  display: none;
+}
+
+.container_detalle__container_seleccion1 {
+  width: 300px;
+  padding: 2%;
+  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.178);
+  border-radius: 5px;
+}
+
+.container_detalle__container_seleccion2 {
+  width: 300px;
+  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.178);
+  padding: 2%;
+  border-radius: 5px;
+}
+
+.container_detalle__container_seleccion3 {
+  width: 300px;
+  padding: 2%;
+  border-radius: 5px;
+  padding: 2%;
+  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.178);
+}
+
+.container_detalle__btn_agregar {
+  background-color:#F56F01;
+  margin-left: 30%;
+  color: white;
+}
+.log_eliminar{
+  width: 20px;
+  height: 20px;
+
+ 
+}
+.container_logoEliminar{
+  display: flex;
+ align-items: center;
+  width: 20px;
+  height: 100px;
+}
+hr.corto {
+  width: 100px; /* Ajusta el ancho según tus necesidades */
+  border: 0.3px solid #ccc; /* Ajusta el color y grosor de la línea */
+  padding: 0;
+}
+.container_detalle__detalles{
+  margin: 5%;
+}
+.contenedor_Co{
+  width: 100pv;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+
+}
+.contenedor_cuerpo__btn_cotizar{
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  background-color: #b4b2b2;
+  color: black;
+}
+.container_dettale_Registro{
+  background-color: #f44336;
+  width: 100hv;
+  height: 400px;
+  display: flex;
+}

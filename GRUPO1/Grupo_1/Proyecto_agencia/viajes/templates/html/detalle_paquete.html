@@ -1,0 +1,302 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/sweetalert2.min.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/css/style_paquets.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/css/detalles.css'%}"/>
+    <title>Detalle Paquete</title>
+</head>
+<body>
+    <header class="contenido_menu">
+        <div class="contenido_menu__logo2"><img src="{% static 'assets/img/icono_rumbotravel.ico'%}"  class="contenido_menu__log1"></div>   
+            <div class="contenido_menu__titulo"> 
+              <h1 class="contenido_menu__titulo--title_1">RUMBO</h1>
+              <h1 class="contenido_menu__titulo--title_2">TRAVEL</h1>
+            </div>      
+    </header>
+    <hr>
+    {% for item in resultados %}
+       <h3>Detalles <color>{{item.Nombre_del_Paquete}}</color></h3>
+        <div class="container_dettale">
+            <div class="container_dettale Registro">
+            <div class="col-md-4 container_detalle__selecionar">
+                <div class="contenedor_cuerpo__p_valor">desde</div>
+                  <div class="contenedor_cuerpo__container_valor">
+                    <h6> {{item.costo}}
+                    </h6>
+                    <p class="contenedor_cuerpo__container_valor--p_valor2">COP/Por persona y por estadía</p>
+                  </div>
+                <hr>
+                 <label for="validationCustomUsername" class="form-label">fecha</label>
+                 <div class="input-group has-validation">
+                  <input type="date" class="fecha" id="fecha" value="2024-09-01">
+                </div >
+                <hr>
+                  <div class="col-12">
+                    <button class="btn btn_selecionar" id="boton" type="submit">Seleccionar</button>
+                  </div>
+            </div>
+            <div class="col-md-4 container_detalle__selecionarRegistros contenedorR">
+                
+            </div>
+            </div>
+
+        <div class="ocult"> 
+        <div class="container_detalle__agregar" >
+          
+            <div class="container_detalle__container_seleccion1">
+            <h5>Habitacion Simple</h5>
+             <p>Aruba - Curacao - Bonaire - San Andrés - Cuba-Plan con desayuno<p>
+
+                <p>Doble Plan con desayuno</p>
+
+                <div class="valor_tarifa"><p>Tarifa Adultos : </p><strong><p id="valor_tarifa">{{item.tarifa}}</p></strong><p>COP</p></div>
+                <p>Tarifa Niños : <strong class="tarifaNs"></strong></p>
+                <p>Tarifa Infante : <strong class="tarifaIs"></strong></p>
+                <!--<p> <strong>Si selecciona niños y/o infantes se desminuye la cantidad de adultos </strong></p>-->
+            </div>
+            <hr>
+            <div class="container_detalle__container_seleccion2">
+                <label for="validationCustomUsername" class="form-label">Numero de habitaciones</label>
+                <select class="valorHabitacion " id="valorHabitacion">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    </select>
+                 
+                <label for="validationCustomUsername" class="form-label">Adultos</label>
+                <select class="valorAdulto" id="valorAdultos">  
+                    <option id="NumAdultos" value="1">0</option>      
+                </select>               
+                <label for="validationCustomUsername" class="form-label ">Niños</label>
+                <select class="valorHabitacion" id="valorNiñoS">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>   
+                    <option value="4">4</option>     
+                </select> 
+                <label for="validationCustomUsername" class="form-label ">Infantes</label>
+                <select class="valorHabitacion" id="valorInfanteS">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>   
+                    <option value="4">4</option>     
+                </select> 
+            </div>
+            <hr>
+            <div class="container_detalle__container_seleccion3">
+                <div class="container_seleccion3--valorHabitacion">
+                    <p>Total por</p>
+                    <p id="total_habitaciones" >0</p>
+                    <p> habitaciones Simple</p>
+               </div>
+               <div class="container_seleccion3__precioTotal">                   
+                    <strong> <p class="total_precio" id="total_precio">0</p></strong>
+                    <strong> <p class="total_precio">COP</p></strong>                                   
+                </div>
+                        <p>Tarifa adulto</p>
+                            <p> <strong>{{item.tarifa}}</strong> COP Por persona y por estadía</p>
+                <div class="col-12">
+                    <button class="btn  container_detalle__btn_agregar Agregar "id="AgregarS" data-agregar="agregarS" type="submit">Agregar</button>
+                  </div>
+            </div>
+        </div>
+
+        <div class="container_detalle__agregar">
+            <div class="container_detalle__container_seleccion1">
+            <h5>Habitacion  Doble</h5>
+             <p>Aruba - Curacao - Bonaire - San Andrés - Cuba-Plan con desayuno<p>
+
+                <p>Doble Plan con desayuno</p>
+
+                <div class="valor_tarifa"><p>Tarifa Adultos : </p><strong><p id="valor_tarifaD">{{item.tarifa}}</p></strong><p>COP</p></div>
+                <p>Tarifa Niños : <strong class="tarifaNd"></strong></p>
+                <p>Tarifa Infante : <strong class="tarifaId"></strong></p>
+                <p> <strong>Si selecciona niños se desminuye la cantidad de adultos </strong></p>
+            </div>
+            <hr>
+            <div class="container_detalle__container_seleccion2">
+                <label for="validationCustomUsername" class="form-label">Numero de habitaciones</label>
+                <select class="valorHabitacion" id="valorHabitacionD">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    </select>
+                <label for="validationCustomUsername" class="form-label">Adultos</label>
+                <select class="valorHabitacion " id="valorAdultosD">
+                    <option id="NumAdultosD" value="1">0</option>
+                </select>
+                <label for="validationCustomUsername" class="form-label ">Niños</label>
+                <select class="valorHabitacion" id="valorNiñosD">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>   
+                    <option value="4">4</option>     
+                </select>
+                <label for="validationCustomUsername" class="form-label ">Infantes</label>
+                <select class="valorHabitacion" id="valorInfanteD">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>   
+                    <option value="4">4</option>     
+                </select> 
+            </div>
+            <hr>
+            <div class="container_detalle__container_seleccion3">
+                <div class="container_seleccion3--valorHabitacion">
+                    <p>Total por</p>
+                    <p id="total_habitacionesD" >0</p>
+                    <p> habitaciones Doble</p>
+               </div>
+
+               <div class="container_seleccion3__precioTotal">                   
+                <strong> <p class="total_precio" id="total_precioD">0</p> </strong>
+                <strong> <p class="total_precio">COP</p></strong>                                   
+                </div>
+                        <p>Tarifa adulto</p>
+                        <p> <strong>{{item.tarifa}}</strong> COP Por persona y por estadía</p>
+                <div class="col-12">
+                    <button class="btn container_detalle__btn_agregar Agregar" id="AgregarD" data-agregar="agregarD"  type="submit">Agregar</button>
+                  </div>
+            </div>
+        </div>
+
+        <div class="container_detalle__agregar">
+            <div class="container_detalle__container_seleccion1">
+            <h5>Habitacion Triple</h5>
+             <p>Aruba - Curacao - Bonaire - San Andrés - Cuba-Plan con desayuno<p>
+
+                <p>Doble Plan con desayuno</p>
+
+                <div class="valor_tarifa"><p>Tarifa Adultos : </p><strong><p id="valor_tarifaT">{{item.tarifa}}</p></strong><p>COP</p></div>
+                <p>Tarifa Niños : <strong class="TarifaNt"></strong></p>
+                <p>Tarifa Infante : <strong class="tarifaIt"></strong></p>
+                <p> <strong>Si selecciona niños y/o infantes se desminuye la cantidad de adultos </strong></p>
+            </div>
+            <hr>
+            <div class="container_detalle__container_seleccion2">
+                <label for="validationCustomUsername" class="form-label">Numero de habitaciones</label>
+                <select class="valorHabitacion " id="valorHabitacionT">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    </select>
+                <label for="validationCustomUsername" class="form-label">Adultos</label>
+                <select class="valorHabitacion " id="valorAdultosT">
+                   <option id="NumAdultosT"value="1">0</option>
+                </select>
+                <label for="validationCustomUsername" class="form-label ">Niños</label>
+                <select class="valorHabitacion " id="valorNiñosT">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>   
+                    <option value="4">4</option>     
+                </select>
+                <label for="validationCustomUsername" class="form-label ">Infantes</label>
+                <select class="valorHabitacion" id="valorInfanteT">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>   
+                    <option value="4">4</option>     
+                </select> 
+            </div>
+            <hr>
+            <div class="container_detalle__container_seleccion3">
+               <div class="container_seleccion3--valorHabitacion">
+                    <p>Total por</p>
+                    <p id="total_habitacionesT" >0</p>
+                    <p> habitaciones Triple</p>
+               </div>
+
+               <div class="container_seleccion3__precioTotal">                   
+                <strong> <p class="total_precio" id="total_precioT"></p></strong>
+                <strong> <p class="total_precio">COP</p></strong>                                   
+               </div>
+                        <p>Tarifa adulto</p>
+                        <p> <strong>{{item.tarifa}}</strong> COP Por persona y por estadía</p>
+                <div class="col-12">
+                    <button class="btn container_detalle__btn_agregar Agregar" id="AgregarT" data-agregar="agregarT" type="submit"> Agregar</button>
+                  </div>
+            </div>
+        </div>
+        <div class="contenedor_Co"> <button id="cotizar" class="contenedor_cuerpo__color_boton contenedor_cuerpo__btn_cotizar" disabled data-agregar="cotizar">Cotizar</button>
+        </div>
+       </div>
+       
+       <div class="container_detalle__detalles">   
+            <ul>
+                <p><strong>Descripción:</strong>
+                </p>  
+                    <li> {{item.descripcion_paquete}}</li>
+                
+            </ul>
+            <ul>
+        <p><strong>Incluye:</strong>
+          
+        </p>    
+            <li> {{item.incluye}}</li>
+            
+        </ul>
+        <ul>
+        <p><strong>No Incluye:</strong>
+           
+        </p>
+        
+        <li> {{item.no_incluye}}</li>
+        </ul>
+        <ul>
+        <p><strong>Nombre del Hospedaje:</strong>
+           
+        </p>
+        <li> {{item.Nombre_del_Hospedaje}}</li>
+        </ul>
+        <ul>
+        <p><strong>Telefeno:</strong>
+           
+
+        </p>
+        
+        <li> {{item.telefono}}</li>
+        </ul>
+       
+       </div>
+        {% endfor%}
+      </div>
+
+    <script src="{%static 'js/jquery-3.7.1.min.js'%}"></script>
+    <script src="{%static 'js/sweetalert2.all.min.js'%}"></script>
+    <script src="{%static 'js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{%static 'js/scripts.js'%}"></script>
+    <script src="{%static 'js/consulta.js'%}"></script>
+    <script src="{%static 'js/paquete.js'%}"></script>
+</body >
+
+</html>
