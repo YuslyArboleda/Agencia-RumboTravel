@@ -1,0 +1,207 @@
+.contenido_menu {
+  background-color: #ffffff;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contenido_menu__titulo {
+  display: flex;
+  justify-content: center;
+  margin-right: 40%;
+  
+}
+
+.contenido_menu__logo1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  margin-left: 10px;
+}
+
+.boton_iniciar {
+  background-color: rgb(95, 128, 201);
+  height: 25px;
+  width: 120px;
+  border: none;
+  border-radius: 10px;
+  margin-left: 5px;
+  color: aliceblue;
+}
+/* .boton_iniciar:hover {
+  background-color: rgb(0, 0, 255);
+} */
+
+.contenido_menu__log1 {
+  width: 50%;
+  height: 100%;
+}
+
+.contenido_menu__logo2 {
+  width: 10%;
+  height: 80px;
+  display: flex;
+  margin-left: 20px;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.contenido_menu__titulo--title_1 {
+  color: blue;
+  font-size: 50px;
+  text-align: center;
+}
+
+.contenido_menu__titulo--title_2 {
+  color: #F56f01;
+  font-size: 40px;
+  margin-top: auto;
+}
+
+.contenedor_cuerpo__title_destino {
+  margin-top: 10px;
+  background-image: url(../../assets/img/ballenas.jpeg);
+  width: 100pv;
+  height: 130px;
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.contenedor_cuerpo__contenido {
+  height: 100pv;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+.contenedor_cuerpo__container_paquetes {
+  width: 1000px;
+  height: 300px;
+  display: flex;
+  border-color: 5px rgba(0, 0, 0, 0.062);
+  box-shadow: 2px 8px 5px 1px rgba(0, 0, 0, 0.265);
+  border-radius: 5px;
+  margin: 10px;
+}
+.contenedor_cuerpo__imagen {
+  width: 1000px;
+  height: 300px;
+}
+.contenedor_cuerpo__container_informacion {
+  width: 1000px;
+  height: 300px;
+}
+.contenedor_cuerpo__informacion {
+  width: 500px;
+  height: 230px;
+}
+.contenedor_cuerpo__boton {
+  width: 500px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+}
+hr {
+  margin: 8px;
+  background-color: blue;
+}
+img {
+  width: 500px;
+  height: 300px;
+}
+.contenedor_cuerpo__color_boton {
+  background-color: rgb(242, 163, 26);
+  width: 80px;
+  height: 30px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.bnt_paginacion{
+  background-color: rgba(159, 162, 163, 0.356);
+  width: 80px;
+  height: 25px;
+  border-radius: 5px;
+  font-size: 15px;
+  border: none;
+}
+.contenedor_cuerpo__btn_verMas{
+  color: rgb(255, 255, 255);
+}
+a{
+  margin: 1px;
+  text-decoration: none;
+  border-bottom: none;
+  color: rgb(231, 112, 9);
+}
+.contenedor_cuerpo__container_valor {
+  width: 350px;
+  display: flex;
+  height: 20px;
+  padding-left: 15px;
+}
+.contenedor_cuerpo__container_tex {
+  width: 400px;
+  height: 40px;
+  margin: 0;
+}
+.contenedor_cuerpo__p_valor {
+  font-size: small;
+  width: 350px;
+  padding-left: 15px;
+}
+.contenedor_cuerpo__p_valor--p_valor2 {
+  width: 300px;
+  height: 20px;
+  padding-left: 5px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+p {
+  font-family: Arial, Helvetica;
+  font-size: 14px;
+}
+h3 {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.contenedor_cuerpo__contenedor {
+  display: flex;
+  justify-content: center;
+
+}
+
+.pages {
+  list-style: none;
+  padding: 2px;
+  width: 80px;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+il {
+  width: 20px;
+  margin: none;
+  padding: 5px;
+}
+.next,
+.prev {
+  background-color: rgb(224, 231, 231);
+  margin: 2px;
+  border-radius: 2px;
+  border: none;
+}
+.footer {
+  height: 50px;
+}
+

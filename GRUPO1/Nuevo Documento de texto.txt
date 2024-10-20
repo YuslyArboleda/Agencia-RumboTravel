@@ -1,0 +1,3 @@
+Buenas noches profe no se si era para esto el bloc, pero mis problemas son que cuando quiero agregar un nuevo paquete me muestra las acomodaciones de solo los 7 primeros pero al momento de guardar no lo hace.
+
+el segundo erros ya es cuando voy a editar un paquete ya existente, cambio el hospedaje y selecciona la acomodacion y le doy guardar la primera vez no guarda, la segunda supuestamente guarda pero cuando voy a mirarlo no lo hizo y continua con su informacionanterior.

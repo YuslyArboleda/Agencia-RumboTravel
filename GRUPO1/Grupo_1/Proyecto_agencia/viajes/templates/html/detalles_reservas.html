@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/sweetalert2.min.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/css/style_paquets.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/css/detalles.css'%}"/>
+    <link rel="stylesheet" href="{%static 'css/css/detalles_reserva.css'%}" />
+    <title>Reserva Paquete</title>
+</head>
+<body>
+  <header class="contenido_menu">
+    <div class="contenido_menu__logo2"><img src="{% static 'assets/img/icono_rumbotravel.ico'%}"  class="contenido_menu__log1"></div>   
+        <div class="contenido_menu__titulo"> 
+          <h1 class="contenido_menu__titulo--title_1">RUMBO</h1>
+          <h1 class="contenido_menu__titulo--title_2">TRAVEL</h1>
+        </div>      
+</header>
+    <hr>
+    {% comment %} {% for item in resultados %} {% endcomment %}
+   <div class="detallesR">
+    <div class="contenedor__detallesR">
+    <div class=" registros_usher">
+        <form class="row g-3">
+            <div class="col-md-4">
+              <label for="validationDefault01" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="validationDefault01" value="" required>
+            </div>
+            <div class="col-md-4">
+              <label for="validationDefault02" class="form-label">cedula</label>
+              <input type="text" class="form-control" id="validationDefault02" value="" required>
+            </div>
+            <div class="col-md-3">
+                <label for="validationDefault04" class="form-label">tipo de cedula</label>
+                <select class="form-select" id="validationDefault04" required>
+                  <option selected disabled value="">cedula de ciuadania</option>
+                  <option>cedula extranjero</option>
+                </select>
+              </div>
+            <div class="col-md-4">
+              <label for="validationDefaultUsername" class="form-label">Correo</label>
+              <div class="input-group">
+                <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationDefault03" class="form-label">Telfono</label>
+              <input type="text" class="form-control" id="validationDefault03" required>
+            </div>
+            
+            <div class="col-md-3">
+              <label for="validationDefault05" class="form-label">Direccion</label>
+              <input type="text" class="form-control" id="validationDefault05" required>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                <label class="form-check-label" for="invalidCheck2">
+                  Agree to terms and conditions
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
+          </form>
+    </div>
+    </div>
+
+    <div class="registrosR">
+      <h2>Registros</h2>
+
+
+
+
+
+
+    </div>
+
+   </div>
+        {% comment %} {% endfor%} {% endcomment %}
+        
+</div>
+
+    <script src="{%static 'js/jquery-3.7.1.min.js'%}"></script>
+    <script src="{%static 'js/sweetalert2.all.min.js'%}"></script>
+    <script src="{%static 'js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{%static 'js/scripts.js'%}"></script>
+    <script src="{%static 'js/consulta.js'%}"></script>
+    <script src="{%static 'js/paquete.js'%}"></script>
+</body >
+
+</html>
