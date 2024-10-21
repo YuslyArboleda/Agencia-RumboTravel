@@ -20,11 +20,6 @@ class PaqueteTourForm(forms.ModelForm):
     
     def __init__(self, *args, **kwargs): #como va a arracar cuando le de click
         super().__init__(*args, **kwargs) #metodo constructor
-        print("formulario")
-
-        print("Instancia", self.instance)
-        print("Instancia pk", self.instance.pk)
-        print("Intncia", self.instance)
         # Inicializamos los querysets, se obtiene toda la informacion
         self.fields["hospedaje"].queryset = Hospedaje.objects.all().distinct() 
         self.fields["id_hospedaje_acomodacion"].queryset = (
@@ -35,16 +30,14 @@ class PaqueteTourForm(forms.ModelForm):
         hospedajes_ids = []
         for key in self.data.keys():
             clave = re.match(
-                r"^paquete-(\d+)-hospedaje$", key
-            )  # captura de cualquier entrada con el formato paquete-<número>-hospedaje.
-            print(clave)
+                r"^paquetetour_set-(\d+)-hospedaje$", key
+            )  # captura de cualquier entrada con el formato paquetetour-<número>-hospedaje.
             if clave:
                 hospedaje_id = self.data.get(key)
                 if hospedaje_id:
                     hospedajes_ids.append(
                         int(hospedaje_id)
                     )  # Guardamos los IDs encontrados
-            print("instancia", self.instance.pk)
             # Si hay múltiples hospedajes, ajustamos los querysets correspondientes
         if hospedajes_ids:
             self.fields["id_hospedaje_acomodacion"].queryset = (
