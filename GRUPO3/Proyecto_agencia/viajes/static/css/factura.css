@@ -1,0 +1,64 @@
+body {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.invoice {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    max-width: 150px;
+}
+
+h2 {
+    color: #007bff; /* Color del título */
+}
+
+h4 {
+    color: #343a40; /* Color de los subtítulos */
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.table th {
+    background-color: #007bff; /* Color de fondo de la cabecera de la tabla */
+    color: #ffffff; /* Color del texto de la cabecera de la tabla */
+}
+
+.table td {
+    color: #495057; /* Color del texto de las celdas */
+}
+
+.total {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #28a745; /* Color del total */
+}
+
+.btn {
+    display: block; /* Centra el botón */
+    margin: 20px auto; /* Añade espacio alrededor */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espacio interno del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Color del botón al pasar el mouse */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
